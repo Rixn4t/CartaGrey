@@ -127,6 +127,9 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 .since p{margin:6px 0;font-family:var(--serif);font-size:1.4rem;color:var(--muted)}
 .since .num{font-family:var(--serif);font-style:italic;font-size:clamp(4.5rem,15vw,8.5rem);line-height:1;color:var(--pink2)}
 .since small{font-size:1rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:640px;margin:auto}
+.chips span{padding:10px 18px;border-radius:999px;background:#f1dce0;color:#33232c;font-family:var(--serif);font-size:1.15rem}
+.tabs{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap}
 @media(max-width:780px){.nav{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:50px}.hero p{margin:auto}.actions{justify-content:center}.polaroid{width:min(280px,75%)}.polaroid img{height:290px}.grid{grid-template-columns:1fr}.section{padding-block:48px}}
 @media(max-width:420px){.flips{grid-template-columns:1fr}.player{grid-template-columns:1fr;justify-items:center;text-align:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.hero-copy,.polaroid{opacity:1}}
@@ -152,7 +155,7 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 
 <header class="topbar">
   <a class="brand hand" href="#inicio">♡ Greymar Prieto</a>
-  <nav class="nav" aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#carta">Mi carta</a><a href="#sorpresas">Sorpresas</a><a href="#musica">Nuestra canción</a></nav>
+  <nav class="nav" aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#carta">Mi carta</a><a href="#sorpresas">Sorpresas</a><a href="#historia">Historia</a><a href="#musica">Canciones</a></nav>
   <button class="btn" id="topMusic">♫ Música</button>
 </header>
 
@@ -167,10 +170,10 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 </section>
 
 <section class="since" id="tiempo">
-  <p>Desde que nos confesamos nuestro amor han pasado</p>
+  <p>Desde que volviste han pasado</p>
   <div class="num" id="days">0</div>
   <p>días</p>
-  <small id="ymd"></small>
+  <small>Todo empezó el 3 de septiembre de 2024 ♡</small>
 </section>
 
 <section class="section" id="carta">
@@ -185,14 +188,27 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
   <div class="head"><h2>Pequeñas sorpresas</h2><p>Toca una tarjeta para voltearla.</p></div>
   <div class="card" style="max-width:760px;margin:auto">
     <div class="flips">
-      <button class="flip" aria-pressed="false"><span class="face front"><b>♡ Lo que admiro</b><small>Un detalle que no quiero olvidar</small></span><span class="face back">No tienes que hacer algo extraordinario para ser especial. Tu forma de ser ya tiene un lugar importante en mi corazón.</span></button>
+      <button class="flip" aria-pressed="false"><span class="face front"><b>♡ Lo que admiro</b><small>Un detalle que no quiero olvidar</small></span><span class="face back">Tu fortaleza a pesar de todo lo que has vivido y tu forma de amar, tan bella. Y tu sonrisa, Grey, es bellísima.</span></button>
       <button class="flip" aria-pressed="false"><span class="face front"><b>✧ Mi inspiración</b><small>Por qué me motivas</small></span><span class="face back">Me inspiras a crecer, a aprender y a trabajar en mí. Gracias por recordarme que siempre puedo intentar ser mejor.</span></button>
       <button class="flip" aria-pressed="false"><span class="face front"><b>🌙 Un deseo</b><small>Algo bonito que te deseo</small></span><span class="face back">Ojalá nunca te falten motivos para sonreír, tranquilidad para tus días difíciles y personas que te quieran con sinceridad.</span></button>
-      <button class="flip" aria-pressed="false"><span class="face front"><b>💌 Para cuando lo necesites</b><small>Un mensaje guardado</small></span><span class="face back">Si alguna vez dudas de lo especial que eres para mí, vuelve a esta página. La hice para recordarte que te amo. — Ricardo ♡</span></button>
+      <button class="flip" aria-pressed="false"><span class="face front"><b>💌 Para cuando lo necesites</b><small>Un mensaje guardado</small></span><span class="face back">Si alguna vez dudas de lo especial que eres para mí, vuelve a esta página. La hice para recordarte que te amo. — Tu gatito ♡</span></button>
     </div>
     <p class="count" id="count" aria-live="polite">0 de 4 descubiertas</p>
-    <div class="final" id="final" hidden>Descubriste todas. Y la última es esta: gracias por ser tú. Esta página es solo una excusa para decírtelo. — Ricardo ♡</div>
+    <div class="final" id="final" hidden>Descubriste todas. Y la última es esta: gracias por ser tú. Esta página es solo una excusa para decírtelo. — Tu gatito ♡</div>
   </div>
+</section>
+
+<section class="section" id="historia" style="padding-top:0">
+  <div class="head"><h2>Nuestra historia</h2><p>Los momentos que guardamos, en una línea del tiempo.</p></div>
+  <div class="card" style="max-width:760px;margin:auto;text-align:center">
+    <button class="btn primary" id="openTimeline">Entrar a la línea del tiempo</button>
+    <p class="final" id="tlMsg" hidden>Esta sección la construimos juntos. Aún en preparación ♡</p>
+  </div>
+</section>
+
+<section class="section" id="favoritos" style="padding-top:0">
+  <div class="head"><h2>Cosas que son tuyas</h2><p>Las que me hacen pensar en ti, Grey.</p></div>
+  <div class="chips"><span>🌭 Perros calientes</span><span>🍬 Dulces</span><span>💄 Maquillaje</span><span>🎬 Películas</span><span>🎵 Cafuné</span></div>
 </section>
 
 <!-- Para agregar recuerdos: sube las fotos al repositorio y llena la lista MEMORIES en el script del final -->
@@ -202,15 +218,16 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 </section>
 
 <section class="section" id="musica" style="padding-top:0">
-  <div class="head"><h2>Nuestra canción</h2><p>Una canción puede decir lo que a veces no sabemos explicar.</p></div>
+  <div class="head"><h2>Nuestras canciones</h2><p>Una canción puede decir lo que a veces no sabemos explicar.</p></div>
   <div class="card player">
     <div class="disc" aria-hidden="true"></div>
     <div>
-      <h3>Melon Vino</h3><small style="color:var(--muted)">WOS</small>
+      <h3 id="tTitle">Melon Vino</h3><small id="tArtist" style="color:var(--muted)">WOS</small>
       <div class="ctrl"><button id="play" aria-label="Reproducir o pausar">▶</button><input id="seek" type="range" min="0" max="1000" value="0" aria-label="Progreso"><span id="time">0:00 / 0:00</span></div>
     </div>
-    <p class="why">Elegí esta canción porque me recuerda a ti.</p>
-    <audio id="au" loop preload="auto" src="WOS%20-%20MELON%20VINO.mp3"></audio>
+    <div class="tabs"><button class="btn primary" data-t="0">Melon Vino</button><button class="btn" data-t="1">Cafuné</button></div>
+    <p class="why" id="why"></p>
+    <audio id="au" loop preload="auto"></audio>
   </div>
 </section>
 
@@ -219,7 +236,7 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
   <h2>Te amo ♡</h2>
   <p>Nunca dejarás de ser alguien muy especial para mí.</p>
   <button class="heart-btn" id="bigHeart" aria-label="Lanzar corazones">♡</button>
-  <p class="hand" style="font-size:1.8rem;color:var(--pink2)">Con amor, Ricardo Velasquez</p>
+  <p class="hand" style="font-size:1.8rem;color:var(--pink2)">Con amor, tu gatito ♡</p>
 </section>
 </main>
 <footer>Hecho con amor por Ricardo Velasquez, para Greymar Prieto ♡</footer>
@@ -241,19 +258,13 @@ async function unlock(){
   else{$('lockErr').textContent='Esa no es. Piensa en nuestra fecha ♡';l.classList.remove('shake');void l.offsetWidth;l.classList.add('shake')}}
 $('unlock').onclick=unlock;$('code').onkeydown=e=>{if(e.key==='Enter')unlock()};
 
-/* Contador de días desde el 03/09/2024 */
-const START=new Date(2024,8,3);
+/* Contador de días desde el reencuentro (18/10/2026) */
+const BACK=new Date(2026,9,18);
 (function(){
-  const n=new Date(),t=new Date(n.getFullYear(),n.getMonth(),n.getDate()),d=Math.max(0,Math.round((t-START)/864e5));
-  let y=t.getFullYear()-START.getFullYear(),m=t.getMonth()-START.getMonth(),dd=t.getDate()-START.getDate();
-  if(dd<0){m--;dd+=new Date(t.getFullYear(),t.getMonth(),0).getDate()}
-  if(m<0){y--;m+=12}
-  const parts=[];if(y)parts.push(y+(y===1?' año':' años'));if(m)parts.push(m+(m===1?' mes':' meses'));parts.push(dd+(dd===1?' día':' días'));
-  $('ymd').textContent='Es decir: '+parts.join(', ');
-  const el=$('days');
-  if(reduce){el.textContent=d.toLocaleString('es');return}
+  const n=new Date(),t=new Date(n.getFullYear(),n.getMonth(),n.getDate()),d=Math.max(0,Math.round((t-BACK)/864e5)),el=$('days');
+  if(reduce){el.textContent=d;return}
   new IntersectionObserver((e,o)=>{if(!e[0].isIntersecting)return;o.disconnect();const s=performance.now();
-    (function f(x){const k=Math.min(1,(x-s)/1800);el.textContent=Math.round(d*(1-Math.pow(1-k,3))).toLocaleString('es');if(k<1)requestAnimationFrame(f)})(s)}).observe(el)
+    (function f(x){const k=Math.min(1,(x-s)/1800);el.textContent=Math.round(d*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(s)}).observe(el)
 })();
 
 /* Entrada */
@@ -269,6 +280,14 @@ $('play').onclick=$('topMusic').onclick=()=>au.paused?au.play().catch(()=>toast(
 au.ontimeupdate=au.onloadedmetadata=()=>{$('seek').value=au.duration?au.currentTime/au.duration*1000:0;$('time').textContent=fmt(au.currentTime)+' / '+fmt(au.duration)};
 $('seek').oninput=e=>{if(au.duration)au.currentTime=e.target.value/1000*au.duration};
 
+const TR=[
+ {src:'WOS%20-%20MELON%20VINO.mp3',t:'Melon Vino',a:'WOS',w:'Esta canción sonaba mucho cuando empezábamos a conocernos. Cada vez que la escucho, vuelvo a ese comienzo. — Tu gatito ♡'},
+ {src:'Cafune.mp3',t:'Cafuné',a:'Micro TDH',w:'Me la dedicaste tú, y la guardo como un regalo. — Tu gatito ♡'}];
+function pick(i,play){au.src=TR[i].src;$('tTitle').textContent=TR[i].t;$('tArtist').textContent=TR[i].a;$('why').textContent=TR[i].w;
+  document.querySelectorAll('[data-t]').forEach(b=>b.classList.toggle('primary',+b.dataset.t===i));if(play)au.play().catch(()=>{})}
+document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>pick(+b.dataset.t,true));
+pick(0,false);
+
 /* Carta que se escribe sola */
 const LETTER=[
 ["Greymar,"],
@@ -276,7 +295,7 @@ const LETTER=[
 ["Quiero que sepas que mi cariño no se trata solamente de decir cosas bonitas. También quiero demostrarlo con mis acciones, con respeto, paciencia, sinceridad y con la manera en que te acompaño. Me importa que puedas ser tú misma y que te sientas valorada."],
 ["No sé qué nos traerá cada nuevo día, pero sí quería dejarte estas palabras para que recuerdes lo importante que eres para mí. Ojalá la vida nos regale muchos momentos que algún día podamos recordar con una sonrisa."],
 ["“Si el tiempo sigue avanzando, que al menos sepa que hubo algo hermoso que nunca quise dejar de sentir: lo que siento por ti.”","quote"],
-["Con todo mi amor,\nRicardo Velasquez ♡","sign"]];
+["Con todo mi amor,\nTu gatito, Ricardo ♡","sign"]];
 let typing=false,skip=false;
 $('readMore').onclick=async()=>{
   if(typing){skip=true;return}
@@ -300,6 +319,7 @@ document.querySelectorAll('.flip').forEach((b,i)=>b.onclick=()=>{
 const MEMORIES=[];
 if(MEMORIES.length){$('recuerdos').hidden=false;$('mem').innerHTML=MEMORIES.map(m=>`<figure><img src="${m.img}" alt="${m.t}" loading="lazy"><figcaption><b>${m.t}</b>${m.d}</figcaption></figure>`).join('')}
 
+$('openTimeline').onclick=()=>{$('tlMsg').hidden=false;hearts(6)};
 $('bigHeart').onclick=()=>{hearts(20);toast('Todo este cariño es para ti, Greymar ♡')};
 
 /* Fondo de estrellas suaves */
