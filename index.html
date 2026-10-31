@@ -3,109 +3,258 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#14141e">
+<meta name="theme-color" content="#12131d">
 <meta name="description" content="Una página hecha con cariño por Ricardo Velasquez para Greymar Prieto.">
 <title>Para Greymar Prieto ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Caveat:wght@500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#12131d;--panel:#1d1e2a;--panel2:#28212d;--text:#fff3f2;--muted:#d0c1cc;--pink:#e9aeb9;--pink2:#f4d2d6;--lilac:#b9acd9;--line:#ffffff20;--shadow:0 18px 55px #0005}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}button,input{font:inherit}button{cursor:pointer}.script{font-family:"Segoe Script","Brush Script MT",cursive;font-weight:500}.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px clamp(18px,5vw,72px);background:#12131ded;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.brand{display:flex;gap:10px;align-items:center;color:var(--pink2);font-size:1.15rem;text-decoration:none}.brand b{font-size:1.6rem}.nav{display:flex;gap:22px;align-items:center}.nav a{color:var(--muted);text-decoration:none;font-size:.9rem}.nav a:hover{color:var(--pink2)}.pill,.btn{border:1px solid #e9aeb966;border-radius:999px;padding:10px 17px;color:var(--text);background:#ffffff08;transition:.2s}.btn.primary{background:var(--pink);border-color:var(--pink);color:#251a22;font-weight:700}.btn:hover,.pill:hover{transform:translateY(-2px);filter:brightness(1.08)}.hero{min-height:610px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:34px;padding:76px clamp(22px,7vw,100px);position:relative;overflow:hidden;background:radial-gradient(ellipse at 74% 28%,#c18caa35,transparent 35%),linear-gradient(180deg,#29253b 0%,#5a455e 42%,#1b1c2b 75%,#12131d 100%)}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#12131d 0%,transparent 55%),radial-gradient(ellipse at 18% 15%,#e9aeb91b,transparent 35%);pointer-events:none}.hero-copy,.polaroid{position:relative;z-index:1}.eyebrow{color:var(--pink);text-transform:uppercase;letter-spacing:.17em;font-size:.74rem}.hero h1{font-size:clamp(3.2rem,7vw,6.2rem);line-height:1.05;margin:14px 0 20px;font-weight:500}.hero h1 em{color:var(--pink2);font-style:normal}.hero p{max-width:620px;color:#f0e3eb;font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.polaroid{justify-self:center;width:min(330px,82%);padding:12px 12px 22px;background:#f1dce0;color:#30252d;box-shadow:var(--shadow);transform:rotate(3deg);border-radius:3px;text-align:center}.photo-art{height:330px;display:grid;place-items:center;background:#242533;font-size:50px;overflow:hidden}.photo-art img{width:100%;height:100%;object-fit:contain;display:block}.polaroid p{margin:12px 0 0;font-size:1.35rem;color:#34242d}.sparkle{position:absolute;color:var(--pink2);font-size:2rem}.sparkle.one{top:10%;right:8%}.sparkle.two{bottom:10%;left:2%}.section{padding:68px clamp(20px,6vw,82px)}.section-heading{text-align:center;margin:0 auto 32px;max-width:680px}.section-heading h2{font-size:clamp(2rem,4vw,3rem);font-weight:500;margin:0 0 8px}.section-heading p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;max-width:1120px;margin:auto}.card{background:linear-gradient(145deg,#222431,#1a1b26);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,3vw,30px);box-shadow:var(--shadow)}.card h3{font-size:1.2rem;font-weight:600;margin:0 0 15px}.letter{color:#e9dfe8}.letter p{margin:0 0 16px}.letter-sign{color:var(--pink2);font-size:1.3rem}.hidden-letter{display:none}.hidden-letter.show{display:block;animation:fade .45s ease}.special-quote{padding:16px 18px;border-left:2px solid var(--pink);background:#e9aeb910;border-radius:0 12px 12px 0;color:var(--pink2);font-size:1.08rem}.surprise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.surprise{min-height:120px;text-align:left;padding:17px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(145deg,#393044,#242431);color:var(--text);transition:.2s}.surprise:hover{transform:translateY(-3px);border-color:#e9aeb977}.surprise strong{display:block;color:var(--pink2);font-size:1.05rem}.surprise span{font-size:.86rem;color:var(--muted)}.surprise-message{min-height:70px;margin-top:15px;padding:16px;border:1px dashed #e9aeb966;border-radius:14px;color:#f2dce4}.music-layout{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}.album{width:84px;height:84px;border-radius:15px;display:grid;place-items:center;font-size:2.3rem;background:linear-gradient(145deg,#e4b3c2,#6b597d 55%,#242637)}.music-input{width:100%;min-width:0;background:#12131d;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:11px;margin-top:10px}.note{font-size:.85rem;color:var(--muted)}.music-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.promise{text-align:center;padding:86px 20px;background:radial-gradient(ellipse at 50% 0%,#9b6e8750,transparent 60%),#171923}.promise h2{font-size:clamp(2.1rem,5vw,4rem);font-weight:500;margin:0;color:var(--pink2)}.promise p{color:var(--muted)}.heart-btn{width:62px;height:62px;border-radius:50%;border:1px solid #e9aeb988;background:#e9aeb81c;color:var(--pink2);font-size:1.7rem;margin:12px;transition:transform .15s}.heart-btn:active{transform:scale(.9)}footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--line);font-size:.85rem}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#f4d2d6;color:#241a22;padding:12px 18px;border-radius:999px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:20;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.heart-float{position:fixed;z-index:30;pointer-events:none;animation:float 1.8s ease-out forwards;color:var(--pink2)}@keyframes float{0%{opacity:0;transform:translateY(0) scale(.5)}20%{opacity:1}100%{opacity:0;transform:translateY(-150px) rotate(20deg) scale(1.4)}}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@media(max-width:780px){.nav{display:none}.hero{grid-template-columns:1fr;padding-top:55px;text-align:center}.hero p{margin-left:auto;margin-right:auto}.actions{justify-content:center}.polaroid{width:min(280px,75%)}.photo-art{height:260px}.cards{grid-template-columns:1fr}.section{padding-top:48px;padding-bottom:48px}}@media(max-width:420px){.surprise-grid{grid-template-columns:1fr}.topbar{padding:11px 14px}.brand{font-size:1rem}.pill{font-size:.8rem;padding:8px 11px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+:root{--bg:#12131d;--panel:#1d1e2a;--text:#fff3f2;--muted:#d0c1cc;--pink:#e9aeb9;--pink2:#f4d2d6;--lilac:#b9acd9;--line:#ffffff20;--shadow:0 18px 55px #0006;--serif:"Cormorant Garamond",Georgia,serif;--hand:Caveat,"Segoe Script",cursive}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+body.locked{overflow:hidden}
+button{font:inherit;cursor:pointer}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--pink2);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0}
+.hand{font-family:var(--hand);font-weight:500}
+#bg{position:fixed;inset:0;z-index:5;pointer-events:none}
+
+/* Entrada: el sobre */
+.gate{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;text-align:center;padding:24px;background:radial-gradient(ellipse at 50% 35%,#3a2c45,#12131d 70%);transition:opacity .8s}
+.gate.gone{opacity:0;pointer-events:none}
+.gate h1{font-size:clamp(2rem,6vw,3rem);font-style:italic}
+.gate small{color:var(--muted)}
+.env{position:relative;width:230px;height:150px;background:#f1dce0;border-radius:6px;box-shadow:var(--shadow);border:0;padding:0;animation:bob 3.2s ease-in-out infinite}
+.env .flap{position:absolute;left:0;top:0;width:100%;height:85px;background:#e6c3ca;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s}
+.env .seal{position:absolute;left:50%;top:62px;transform:translateX(-50%);width:44px;height:44px;border-radius:50%;background:#c0627a;color:#fff;display:grid;place-items:center;font-size:1.4rem;transition:opacity .3s;z-index:2}
+.gate.open .flap{transform:rotateX(180deg)}
+.gate.open .seal{opacity:0}
+.gate.open .env{animation:none}
+@keyframes bob{50%{transform:translateY(-8px)}}
+
+/* Barra */
+.topbar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px clamp(18px,5vw,72px);background:#12131def;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.brand{color:var(--pink2);font-size:1.5rem;text-decoration:none}
+.nav{display:flex;gap:22px}
+.nav a{color:var(--muted);text-decoration:none;font-size:.9rem}
+.nav a:hover{color:var(--pink2)}
+.btn{display:inline-block;border:1px solid #e9aeb966;border-radius:999px;padding:10px 18px;color:var(--text);background:#ffffff08;text-decoration:none;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.btn.primary{background:var(--pink);border-color:var(--pink);color:#251a22;font-weight:700}
+
+/* Portada */
+.hero{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:34px;padding:70px clamp(22px,7vw,100px);background:radial-gradient(ellipse at 74% 28%,#c18caa35,transparent 38%),linear-gradient(180deg,#29253b,#5a455e 45%,#1b1c2b 80%,#12131d)}
+.hero h1{font-size:clamp(3.6rem,9vw,7rem);line-height:1;font-style:italic;color:var(--pink2);margin-bottom:18px}
+.hero p{max-width:540px;color:#f0e3eb;font-family:var(--serif);font-size:1.35rem;line-height:1.55;margin:0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.polaroid{justify-self:center;width:min(330px,82%);padding:12px 12px 20px;background:#f1dce0;color:#30252d;box-shadow:var(--shadow);transform:rotate(3deg);border-radius:3px;text-align:center;transition:transform .4s}
+.polaroid:hover{transform:rotate(0) scale(1.03)}
+.polaroid img{display:block;width:100%;height:330px;object-fit:cover;object-position:center 25%}
+.polaroid p{margin:10px 0 0;font-family:var(--hand);font-size:1.6rem;color:#34242d}
+.hero-copy,.polaroid{opacity:0}
+body.in .hero-copy{animation:rise .9s .1s both}
+body.in .polaroid{animation:rise .9s .5s both}
+@keyframes rise{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+
+.section{padding:70px clamp(20px,6vw,82px)}
+.head{text-align:center;margin:0 auto 30px;max-width:640px}
+.head h2{font-size:clamp(2.2rem,5vw,3.4rem);font-style:italic}
+.head p{color:var(--muted);margin:6px 0 0}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;max-width:1120px;margin:auto}
+.card{background:linear-gradient(145deg,#222431,#1a1b26);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,32px);box-shadow:var(--shadow)}
+
+/* Carta */
+.paper{background:#f6e9e4;color:#3a2a33;border-radius:6px;padding:clamp(24px,4vw,40px);font-family:var(--serif);font-size:1.28rem;line-height:1.6;min-height:240px;box-shadow:var(--shadow)}
+.paper p{margin:0 0 14px;white-space:pre-line}
+.paper .quote{border-left:3px solid #c0627a;padding-left:16px;font-style:italic;color:#7a3f55}
+.paper .sign{font-family:var(--hand);font-size:1.8rem;color:#9a4a63;line-height:1.3}
+#readMore{margin-top:16px}
+
+/* Sorpresas */
+.flips{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.flip{position:relative;height:190px;padding:0;border:0;background:none;perspective:900px;color:var(--text);text-align:left}
+.face{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:16px;border-radius:16px;border:1px solid var(--line);backface-visibility:hidden;transition:transform .6s}
+.front{background:linear-gradient(145deg,#463852,#252433)}
+.front b{font-family:var(--serif);font-size:1.3rem;color:var(--pink2);font-weight:600}
+.front small{color:var(--muted)}
+.back{background:#f1dce0;color:#33232c;transform:rotateY(180deg);font-family:var(--serif);font-size:1.05rem;line-height:1.35;overflow:auto}
+.flip.on .front{transform:rotateY(-180deg)}
+.flip.on .back{transform:rotateY(0)}
+.count{color:var(--muted);font-size:.9rem;margin:14px 0 0}
+.final{margin-top:14px;padding:16px;border:1px dashed #e9aeb988;border-radius:14px;color:var(--pink2);font-family:var(--serif);font-size:1.2rem;animation:rise .7s both}
+
+/* Recuerdos */
+.mem{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 18px;max-width:1120px;margin:auto}
+.mem figure{flex:0 0 min(280px,80%);margin:0;scroll-snap-align:center;background:#f1dce0;color:#30252d;padding:10px 10px 16px;border-radius:3px;box-shadow:var(--shadow)}
+.mem img{width:100%;height:260px;object-fit:cover;display:block}
+.mem figcaption{padding-top:10px;font-family:var(--serif);font-size:1.05rem;line-height:1.35}
+.mem b{display:block;font-size:1.25rem}
+
+/* Música */
+.player{max-width:640px;margin:auto;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.disc{width:104px;height:104px;border-radius:50%;background:radial-gradient(circle,#12131d 0 9%,#f4d2d6 10% 16%,#2a2438 17% 38%,#473a5c 39% 40%,#1c1b28 41%);border:1px solid var(--line);animation:spin 6s linear infinite paused}
+body.playing .disc{animation-play-state:running}
+@keyframes spin{to{rotate:360deg}}
+.player h3{font-size:1.7rem;font-style:italic}
+.ctrl{display:flex;align-items:center;gap:12px;margin-top:8px}
+#play{width:44px;height:44px;border-radius:50%;border:0;background:var(--pink);color:#251a22;font-size:1rem;flex:none}
+#seek{flex:1;accent-color:var(--pink);min-width:0}
+#time{font-size:.8rem;color:var(--muted);white-space:nowrap}
+.why{grid-column:1/-1;font-family:var(--serif);font-size:1.2rem;color:var(--pink2);margin:6px 0 0}
+
+.promise{text-align:center;padding:90px 20px;background:radial-gradient(ellipse at 50% 0%,#9b6e8750,transparent 60%),#171923}
+.promise h2{font-size:clamp(3rem,9vw,6rem);font-style:italic;color:var(--pink2)}
+.promise p{color:var(--muted);font-family:var(--serif);font-size:1.3rem;margin:6px 0}
+.heart-btn{width:68px;height:68px;border-radius:50%;border:1px solid #e9aeb988;background:#e9aeb81c;color:var(--pink2);font-size:1.8rem;margin:14px;transition:transform .15s}
+.heart-btn:active{transform:scale(.88)}
+footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--line);font-size:.85rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#f4d2d6;color:#241a22;padding:12px 18px;border-radius:999px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:200;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.heart-float{position:fixed;z-index:150;pointer-events:none;color:var(--pink2);animation:float 1.8s ease-out forwards}
+@keyframes float{0%{opacity:0;transform:translateY(0) scale(.5)}20%{opacity:1}100%{opacity:0;transform:translateY(-150px) rotate(20deg) scale(1.4)}}
+
+@media(max-width:780px){.nav{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:50px}.hero p{margin:auto}.actions{justify-content:center}.polaroid{width:min(280px,75%)}.polaroid img{height:290px}.grid{grid-template-columns:1fr}.section{padding-block:48px}}
+@media(max-width:420px){.flips{grid-template-columns:1fr}.player{grid-template-columns:1fr;justify-items:center;text-align:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.hero-copy,.polaroid{opacity:1}}
 </style>
 </head>
-<body>
+<body class="locked">
+
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<div class="gate" id="gate">
+  <h1>Hice algo para ti, Greymar</h1>
+  <button class="env" id="openGate" aria-label="Abrir el sobre"><span class="flap"></span><span class="seal">♡</span></button>
+  <div><button class="btn primary" id="openBtn">Abrir ♡</button><br><small>Esta página tiene música 🎵</small></div>
+</div>
+
 <header class="topbar">
-  <a class="brand" href="#inicio"><b>♡</b><span class="script">Greymar Prieto</span></a>
+  <a class="brand hand" href="#inicio">♡ Greymar Prieto</a>
   <nav class="nav" aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#carta">Mi carta</a><a href="#sorpresas">Sorpresas</a><a href="#musica">Nuestra canción</a></nav>
-  <button class="pill" id="topHeart" aria-label="Enviar un corazón">Para ti ♡</button>
+  <button class="btn" id="topMusic">♫ Música</button>
 </header>
+
 <main>
 <section class="hero" id="inicio">
-  <span class="sparkle one">♡</span><span class="sparkle two">✧</span>
   <div class="hero-copy">
-    <div class="eyebrow">Un pequeño universo para ti</div>
-    <h1 class="script">Greymar, <em>♡</em></h1>
-    <p>Por más que pase el tiempo, hay sentimientos que no pierden su lugar. Eres una de las personas más especiales para mí y me inspiras a intentar ser mi mejor versión, todos los días.</p>
-    <div class="actions"><a class="btn primary" href="#carta" style="text-decoration:none">Tengo algo que decirte ↘</a><button class="btn" id="surpriseTop">Toca para una sorpresa ✨</button></div>
+    <h1>Greymar,</h1>
+    <p>Eres una de las personas más especiales para mí y me inspiras a intentar ser mi mejor versión, todos los días.</p>
+    <div class="actions"><a class="btn primary" href="#carta">Tengo algo que decirte</a><a class="btn" href="#sorpresas">Elige una sorpresa ✨</a></div>
   </div>
-  <div class="polaroid" aria-label="Fotografía de Greymar">
-    <div class="photo-art">
-      <img src="GreyFoto.jpeg" alt="Greymar Prieto">
-    </div>
-    <p class="script">Tú, en mis pensamientos</p>
-  </div>
+  <div class="polaroid"><img src="GreyFoto.jpeg" alt="Greymar Prieto"><p>Tú, en mis pensamientos</p></div>
 </section>
-<section class="section" id="carta">
-  <div class="section-heading"><div class="eyebrow">Con todo mi cariño</div><h2 class="script">Una carta para Greymar</h2><p>Hay palabras que merecen un lugar especial.</p></div>
-  <div class="cards">
-    <article class="card letter">
-      <h3>♡ Lo que quiero que sepas</h3>
-      <p>Greymar,</p>
-      <p>Por más que pase el tiempo, yo nunca dejaré de amarte. Eres la persona más especial para mí y me motivas a ser mi mejor versión todos los días. A veces no encuentro las palabras exactas para explicar lo que siento, pero sí sé que tu presencia significa muchísimo para mí.</p>
-      <div class="hidden-letter" id="extraLetter">
-        <p>Quiero que sepas que mi cariño no se trata solamente de decir cosas bonitas. También quiero demostrarlo con mis acciones, con respeto, paciencia, sinceridad y con la manera en que te acompaño. Me importa que puedas ser tú misma y que te sientas valorada.</p>
-        <p>No sé qué nos traerá cada nuevo día, pero sí quería dejarte estas palabras para que recuerdes lo importante que eres para mí. Ojalá la vida nos regale muchos momentos que algún día podamos recordar con una sonrisa.</p>
-        <div class="special-quote">“Si el tiempo sigue avanzando, que al menos sepa que hubo algo hermoso que nunca quise dejar de sentir: lo que siento por ti.”</div>
-        <p class="letter-sign script">Con todo mi amor,<br>Ricardo Velasquez ♡</p>
-      </div>
-      <button class="btn primary" id="readMore" aria-expanded="false">Abrir la carta completa ♡</button>
-    </article>
-    <article class="card" id="sorpresas">
-      <h3>✧ Pequeñas sorpresas para ti</h3>
-      <p class="note">Elige una y descubre un mensajito. He guardado unas cuantas palabras para ti.</p>
-      <div class="surprise-grid">
-        <button class="surprise" data-message="No tienes que hacer algo extraordinario para ser especial. Tu forma de ser ya tiene un lugar importante en mi corazón."><strong>♡ Lo que admiro</strong><span>Un detalle que no quiero olvidar</span></button>
-        <button class="surprise" data-message="Me inspiras a crecer, a aprender y a trabajar en mí. Gracias por recordarme que siempre puedo intentar ser mejor."><strong>✧ Mi inspiración</strong><span>Por qué me motivas</span></button>
-        <button class="surprise" data-message="Ojalá nunca te falten motivos para sonreír, tranquilidad para tus días difíciles y personas que te quieran con sinceridad."><strong>🌙 Un deseo</strong><span>Algo bonito que te deseo</span></button>
-        <button class="surprise" data-message="Si alguna vez dudas de lo especial que eres para mí, vuelve a esta página. La hice para recordarte que te amo. — Ricardo ♡"><strong>💌 Para cuando lo necesites</strong><span>Un mensaje guardado para ti</span></button>
-      </div>
-      <div class="surprise-message" id="surpriseMessage" aria-live="polite">Tu sorpresa te está esperando. Toca cualquiera de las tarjetas. ♡</div>
-    </article>
-  </div>
-</section>
-<section class="section" id="musica" style="padding-top:0">
-  <div class="section-heading"><div class="eyebrow">Dale una banda sonora</div><h2 class="script">Nuestra canción</h2><p>Una canción puede decir cosas que a veces no sabemos cómo explicar.</p></div>
-  <div class="card" style="max-width:760px;margin:auto">
-    <div class="music-layout"><div class="album">♫</div><div><h3 style="margin-bottom:2px">Una canción para Greymar</h3><p class="note" style="margin:0">Disfruta de nuestra canción de fondo o añade un enlace alternativo si lo prefieres.</p></div></div>
-    
-    <!-- Reproductor de música de fondo integrado -->
-    <div style="margin-top: 18px;">
-      <audio controls loop style="width: 100%; border-radius: 8px;">
-        <source src="WOS - MELON VINO.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-      </audio>
-    </div>
 
-    <label for="songUrl" class="note" style="display:block;margin-top:18px">Enlace de otra canción (Opcional)</label>
-    <input class="music-input" id="songUrl" type="url" placeholder="https://..." autocomplete="url">
-    <div class="music-actions"><button class="btn primary" id="openSong">Escuchar enlace externo ♫</button><button class="btn" id="saveSong">Guardar enlace en este dispositivo</button></div>
-    <p class="note" id="songStatus">También puedes usar el reproductor de arriba para escuchar la canción directamente en la página.</p>
+<section class="section" id="carta">
+  <div class="head"><h2>Una carta para Greymar</h2><p>Hay palabras que merecen un lugar especial.</p></div>
+  <div style="max-width:760px;margin:auto">
+    <div class="paper"><div id="letterBody"><p>Escribí unas palabras para ti. Ábrela cuando quieras.</p></div></div>
+    <button class="btn primary" id="readMore">Abrir la carta ♡</button>
   </div>
 </section>
-<section class="promise" id="siempre">
-  <div class="eyebrow">Para ti, Greymar Prieto</div>
-  <h2 class="script">Te amo ♡</h2>
-  <p>Por más que pase el tiempo, nunca dejarás de ser alguien muy especial para mí.</p>
+
+<section class="section" id="sorpresas" style="padding-top:0">
+  <div class="head"><h2>Pequeñas sorpresas</h2><p>Toca una tarjeta para voltearla.</p></div>
+  <div class="card" style="max-width:760px;margin:auto">
+    <div class="flips">
+      <button class="flip" aria-pressed="false"><span class="face front"><b>♡ Lo que admiro</b><small>Un detalle que no quiero olvidar</small></span><span class="face back">No tienes que hacer algo extraordinario para ser especial. Tu forma de ser ya tiene un lugar importante en mi corazón.</span></button>
+      <button class="flip" aria-pressed="false"><span class="face front"><b>✧ Mi inspiración</b><small>Por qué me motivas</small></span><span class="face back">Me inspiras a crecer, a aprender y a trabajar en mí. Gracias por recordarme que siempre puedo intentar ser mejor.</span></button>
+      <button class="flip" aria-pressed="false"><span class="face front"><b>🌙 Un deseo</b><small>Algo bonito que te deseo</small></span><span class="face back">Ojalá nunca te falten motivos para sonreír, tranquilidad para tus días difíciles y personas que te quieran con sinceridad.</span></button>
+      <button class="flip" aria-pressed="false"><span class="face front"><b>💌 Para cuando lo necesites</b><small>Un mensaje guardado</small></span><span class="face back">Si alguna vez dudas de lo especial que eres para mí, vuelve a esta página. La hice para recordarte que te amo. — Ricardo ♡</span></button>
+    </div>
+    <p class="count" id="count" aria-live="polite">0 de 4 descubiertas</p>
+    <div class="final" id="final" hidden>Descubriste todas. Y la última es esta: gracias por ser tú. Esta página es solo una excusa para decírtelo. — Ricardo ♡</div>
+  </div>
+</section>
+
+<!-- Para agregar recuerdos: sube las fotos al repositorio y llena la lista MEMORIES en el script del final -->
+<section class="section" id="recuerdos" style="padding-top:0" hidden>
+  <div class="head"><h2>Momentos que guardo</h2><p>Desliza para verlos.</p></div>
+  <div class="mem" id="mem"></div>
+</section>
+
+<section class="section" id="musica" style="padding-top:0">
+  <div class="head"><h2>Nuestra canción</h2><p>Una canción puede decir lo que a veces no sabemos explicar.</p></div>
+  <div class="card player">
+    <div class="disc" aria-hidden="true"></div>
+    <div>
+      <h3>Melon Vino</h3><small style="color:var(--muted)">WOS</small>
+      <div class="ctrl"><button id="play" aria-label="Reproducir o pausar">▶</button><input id="seek" type="range" min="0" max="1000" value="0" aria-label="Progreso"><span id="time">0:00 / 0:00</span></div>
+    </div>
+    <p class="why">Elegí esta canción porque me recuerda a ti.</p>
+    <audio id="au" loop preload="auto" src="WOS%20-%20MELON%20VINO.mp3"></audio>
+  </div>
+</section>
+
+<section class="promise">
+  <p>Para ti, Greymar Prieto</p>
+  <h2>Te amo ♡</h2>
+  <p>Nunca dejarás de ser alguien muy especial para mí.</p>
   <button class="heart-btn" id="bigHeart" aria-label="Lanzar corazones">♡</button>
-  <p class="script" style="font-size:1.25rem;color:var(--pink2)">Con amor, Ricardo Velasquez</p>
-  <button class="btn" id="copyMessage">Copiar mi dedicatoria</button>
+  <p class="hand" style="font-size:1.8rem;color:var(--pink2)">Con amor, Ricardo Velasquez</p>
 </section>
 </main>
 <footer>Hecho con amor por Ricardo Velasquez, para Greymar Prieto ♡</footer>
 <div class="toast" id="toast" role="status"></div>
+
 <script>
-const $=id=>document.getElementById(id);
-let toastTimer;
-function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2400)}
-$('readMore').addEventListener('click',()=>{const x=$('extraLetter'),open=x.classList.toggle('show');$('readMore').textContent=open?'Cerrar la carta ♡':'Abrir la carta completa ♡';$('readMore').setAttribute('aria-expanded',String(open))});
-document.querySelectorAll('.surprise').forEach(b=>b.addEventListener('click',()=>{$('surpriseMessage').textContent=b.dataset.message;document.querySelectorAll('.surprise').forEach(x=>x.style.borderColor='var(--line)');b.style.borderColor='var(--pink)'}));
-function hearts(n=8){for(let i=0;i<n;i++){const h=document.createElement('span');h.className='heart-float';h.textContent=['♡','♥','✧'][Math.floor(Math.random()*3)];h.style.left=(12+Math.random()*76)+'vw';h.style.top=(55+Math.random()*30)+'vh';h.style.fontSize=(18+Math.random()*24)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),1900)}}
-$('bigHeart').addEventListener('click',()=>{hearts(18);toast('Todo este cariño es para ti, Greymar ♡')});
-$('topHeart').addEventListener('click',()=>{hearts(10);toast('Un corazoncito para ti ♡')});
-$('surpriseTop').addEventListener('click',()=>{hearts(12);$('surpriseMessage').textContent='Sorpresa: alguien quiso tomarse el tiempo de crear este pequeño rincón solo para ti. — Ricardo ♡';document.querySelector('#sorpresas').scrollIntoView({behavior:'smooth'});toast('Una sorpresa te espera más abajo ♡')});
-function validUrl(){const raw=$('songUrl').value.trim();try{const u=new URL(raw);if(!['https:','http:'].includes(u.protocol))throw Error();return u.href}catch(e){toast('Pega un enlace válido de una canción primero.');return null}}
-$('openSong').addEventListener('click',()=>{const u=validUrl();if(u)window.open(u,'_blank','noopener,noreferrer')});
-$('saveSong').addEventListener('click',()=>{const u=validUrl();if(!u)return;try{localStorage.setItem('greymarSongUrl',u);$('songStatus').textContent='Enlace guardado en este dispositivo. Pulsa “Escuchar canción” cuando quieras.';toast('Canción guardada ♡')}catch(e){toast('No se pudo guardar en este navegador. Puedes usar el enlace directamente.')}});
-try{const saved=localStorage.getItem('greymarSongUrl');if(saved){$('songUrl').value=saved;$('songStatus').textContent='Encontré una canción guardada en este dispositivo.'}}catch(e){}
-$('copyMessage').addEventListener('click',async()=>{const msg='Greymar Prieto: por más que pase el tiempo, yo nunca dejaré de amarte. Eres la persona más especial para mí y me motivas a ser mi mejor versión todos los días. Te amo. — Ricardo Velasquez ♡';try{await navigator.clipboard.writeText(msg);toast('Dedicatoria copiada ♡')}catch(e){const ta=document.createElement('textarea');ta.value=msg;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Dedicatoria copiada ♡')}});
+const $=id=>document.getElementById(id),au=$('au'),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let tt;
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2400)}
+function hearts(n=10){if(reduce)return;for(let i=0;i<n;i++){const h=document.createElement('span');h.className='heart-float';h.textContent=['♡','♥','✧'][Math.floor(Math.random()*3)];h.style.cssText=`left:${12+Math.random()*76}vw;top:${55+Math.random()*30}vh;font-size:${18+Math.random()*24}px`;document.body.appendChild(h);setTimeout(()=>h.remove(),1900)}}
+
+/* Entrada */
+function openGate(){const g=$('gate');if(g.classList.contains('open'))return;g.classList.add('open');au.volume=.8;au.play().catch(()=>{});
+  setTimeout(()=>{g.classList.add('gone');document.body.classList.remove('locked');document.body.classList.add('in')},reduce?0:900);setTimeout(()=>g.remove(),1900)}
+$('openGate').onclick=$('openBtn').onclick=openGate;
+
+/* Música */
+const fmt=s=>isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';
+function sync(){const p=!au.paused;document.body.classList.toggle('playing',p);$('play').textContent=p?'❚❚':'▶';$('topMusic').textContent=p?'♫ Pausar':'♫ Música'}
+au.onplay=au.onpause=sync;
+$('play').onclick=$('topMusic').onclick=()=>au.paused?au.play().catch(()=>toast('Toca de nuevo para reproducir')):au.pause();
+au.ontimeupdate=au.onloadedmetadata=()=>{$('seek').value=au.duration?au.currentTime/au.duration*1000:0;$('time').textContent=fmt(au.currentTime)+' / '+fmt(au.duration)};
+$('seek').oninput=e=>{if(au.duration)au.currentTime=e.target.value/1000*au.duration};
+
+/* Carta que se escribe sola */
+const LETTER=[
+["Greymar,"],
+["Por más que pase el tiempo, yo nunca dejaré de amarte. Eres la persona más especial para mí y me motivas a ser mi mejor versión todos los días. A veces no encuentro las palabras exactas para explicar lo que siento, pero sí sé que tu presencia significa muchísimo para mí."],
+["Quiero que sepas que mi cariño no se trata solamente de decir cosas bonitas. También quiero demostrarlo con mis acciones, con respeto, paciencia, sinceridad y con la manera en que te acompaño. Me importa que puedas ser tú misma y que te sientas valorada."],
+["No sé qué nos traerá cada nuevo día, pero sí quería dejarte estas palabras para que recuerdes lo importante que eres para mí. Ojalá la vida nos regale muchos momentos que algún día podamos recordar con una sonrisa."],
+["“Si el tiempo sigue avanzando, que al menos sepa que hubo algo hermoso que nunca quise dejar de sentir: lo que siento por ti.”","quote"],
+["Con todo mi amor,\nRicardo Velasquez ♡","sign"]];
+let typing=false,skip=false;
+$('readMore').onclick=async()=>{
+  if(typing){skip=true;return}
+  typing=true;$('readMore').textContent='Mostrar completa';
+  const box=$('letterBody');box.innerHTML='';
+  for(const [t,c] of LETTER){
+    const p=document.createElement('p');if(c)p.className=c;box.appendChild(p);
+    for(let i=0;i<t.length&&!skip&&!reduce;i++){p.textContent=t.slice(0,i+1);await new Promise(r=>setTimeout(r,/[.,]/.test(t[i])?150:20))}
+    p.textContent=t}
+  typing=false;$('readMore').hidden=true;hearts(8)};
+
+/* Tarjetas que se voltean */
+const found=new Set();
+document.querySelectorAll('.flip').forEach((b,i)=>b.onclick=()=>{
+  const on=b.classList.toggle('on');b.setAttribute('aria-pressed',on);
+  if(on){found.add(i);$('count').textContent=found.size+' de 4 descubiertas';
+    if(found.size===4&&$('final').hidden){$('final').hidden=false;hearts(14);toast('Descubriste todas ♡')}}});
+
+/* Recuerdos (opcional): agrega fotos aquí, por ejemplo:
+   {img:'foto1.jpeg', t:'La primera vez que…', d:'Un recuerdo corto.'} */
+const MEMORIES=[];
+if(MEMORIES.length){$('recuerdos').hidden=false;$('mem').innerHTML=MEMORIES.map(m=>`<figure><img src="${m.img}" alt="${m.t}" loading="lazy"><figcaption><b>${m.t}</b>${m.d}</figcaption></figure>`).join('')}
+
+$('bigHeart').onclick=()=>{hearts(20);toast('Todo este cariño es para ti, Greymar ♡')};
+
+/* Fondo de estrellas suaves */
+const cv=$('bg'),cx=cv.getContext('2d'),P=[];let W,H;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<45;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.6,v:Math.random()*.0004+.00015,a:Math.random()*.5+.2});
+(function f(){cx.clearRect(0,0,W,H);for(const p of P){p.y-=p.v;if(p.y<-.02)p.y=1.02;cx.fillStyle=`rgba(244,210,214,${p.a})`;cx.beginPath();cx.arc(p.x*W,p.y*H,p.r,0,7);cx.fill()}if(!reduce)requestAnimationFrame(f)})();
 </script>
 </body>
 </html>
