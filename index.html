@@ -130,6 +130,17 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:640px;margin:auto}
 .chips span{padding:10px 18px;border-radius:999px;background:#f1dce0;color:#33232c;font-family:var(--serif);font-size:1.15rem}
 .tabs{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap}
+.thanks{position:fixed;inset:0;z-index:130;display:grid;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 30%,#4a3558f2,#12131df7 75%);backdrop-filter:blur(8px)}
+.thanks .box{width:min(640px,100%);text-align:center}
+.thanks small{color:var(--pink);font-size:1rem}
+.thanks h3{font-size:clamp(2.2rem,7vw,3.4rem);font-style:italic;color:var(--pink2);margin:6px 0 14px}
+.thanks p{font-family:var(--serif);font-size:clamp(1.25rem,3.6vw,1.6rem);line-height:1.5;min-height:8em;margin:0}
+.step{animation:rise .6s both}
+.dots{display:flex;gap:8px;justify-content:center;margin:14px 0 18px}
+.dots i{width:9px;height:9px;border-radius:50%;background:#ffffff33;transition:.3s}
+.dots i.on{background:var(--pink);transform:scale(1.35)}
+.nav2{display:flex;gap:10px;justify-content:center}
+.xbtn{position:absolute;top:14px;right:18px;font-size:2rem;line-height:1;background:none;border:0;color:var(--muted)}
 @media(max-width:780px){.nav{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:50px}.hero p{margin:auto}.actions{justify-content:center}.polaroid{width:min(280px,75%)}.polaroid img{height:290px}.grid{grid-template-columns:1fr}.section{padding-block:48px}}
 @media(max-width:420px){.flips{grid-template-columns:1fr}.player{grid-template-columns:1fr;justify-items:center;text-align:center}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.hero-copy,.polaroid{opacity:1}}
@@ -155,7 +166,7 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 
 <header class="topbar">
   <a class="brand hand" href="#inicio">♡ Greymar Prieto</a>
-  <nav class="nav" aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#carta">Mi carta</a><a href="#sorpresas">Sorpresas</a><a href="#historia">Historia</a><a href="#musica">Canciones</a></nav>
+  <nav class="nav" aria-label="Navegación principal"><a href="#inicio">Inicio</a><a href="#carta">Mi carta</a><a href="#sorpresas">Sorpresas</a><a href="#historia">Historia</a><a href="#gracias">Gracias</a><a href="#musica">Canciones</a></nav>
   <button class="btn" id="topMusic">♫ Música</button>
 </header>
 
@@ -206,6 +217,11 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
   </div>
 </section>
 
+<section class="section" id="gracias" style="padding-top:0">
+  <div class="head"><h2>Gracias por todo</h2><p>Lo que viví y aprendí contigo, Grey.</p></div>
+  <div class="card" style="max-width:760px;margin:auto;text-align:center"><button class="btn primary" id="openThanks">Leer mi agradecimiento ♡</button></div>
+</section>
+
 <section class="section" id="favoritos" style="padding-top:0">
   <div class="head"><h2>Cosas que son tuyas</h2><p>Las que me hacen pensar en ti, Grey.</p></div>
   <div class="chips"><span>🌭 Perros calientes</span><span>🍬 Dulces</span><span>💄 Maquillaje</span><span>🎬 Películas</span><span>🎵 Cafuné</span></div>
@@ -240,6 +256,14 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 </section>
 </main>
 <footer>Hecho con amor por Ricardo Velasquez, para Greymar Prieto ♡</footer>
+<div class="thanks" id="thanks" role="dialog" aria-modal="true" aria-label="Gracias por todo" hidden>
+  <button class="xbtn" id="thClose" aria-label="Cerrar">×</button>
+  <div class="box">
+    <div class="step" id="thStep"><small id="thKick"></small><h3 id="thTitle"></h3><p id="thText"></p></div>
+    <div class="dots" id="thDots"></div>
+    <div class="nav2"><button class="btn" id="thPrev">Atrás</button><button class="btn primary" id="thNext">Siguiente</button></div>
+  </div>
+</div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
@@ -321,6 +345,29 @@ if(MEMORIES.length){$('recuerdos').hidden=false;$('mem').innerHTML=MEMORIES.map(
 
 $('openTimeline').onclick=()=>{$('tlMsg').hidden=false;hearts(6)};
 $('bigHeart').onclick=()=>{hearts(20);toast('Todo este cariño es para ti, Greymar ♡')};
+
+/* Gracias por todo: edita aquí los textos [antetítulo, título, texto] */
+const TH=[
+ ['Gracias por los años','Más de cuatro años','Desde los chats del colegio en 2022 hasta hoy, fuiste parte de mi vida. Gracias por cada etapa.'],
+ ['Gracias por lo que me enseñaste','Tu fortaleza','Verte seguir adelante a pesar de todo lo que viviste me enseñó lo que es ser fuerte de verdad.'],
+ ['Gracias por lo que me enseñaste','Amar con cuidado','Tu forma de amar me mostró que querer también es respetar, tener paciencia y cuidar los detalles.'],
+ ['Gracias por lo que tuve que aprender','Construir confianza','Contigo entendí que la confianza se construye con hechos y que mis inseguridades me tocan a mí. Ojalá lo hubiera aprendido antes. Gracias por tu paciencia.'],
+ ['Gracias por volver','Estos días juntos','Gracias por haber regresado y por estos días juntos. Los voy a guardar con cariño.'],
+ ['Para ti','Gracias, Grey','Espero que seas muy feliz y que te vaya muy bien. Por el momento yo no puedo seguir, pero mi corazón siempre te va a esperar, por si algún día estás lista. — Tu gatito ♡']];
+let ti=0;const thEl=$('thanks');
+function showTh(i){ti=i;const [k,t,x]=TH[i],st=$('thStep');
+  $('thKick').textContent=k;$('thTitle').textContent=t;$('thText').textContent=x;
+  st.classList.remove('step');void st.offsetWidth;st.classList.add('step');
+  $('thDots').innerHTML=TH.map((_,j)=>`<i class="${j===i?'on':''}"></i>`).join('');
+  $('thPrev').style.visibility=i?'visible':'hidden';
+  $('thNext').textContent=i===TH.length-1?'Cerrar ♡':'Siguiente';
+  if(i===TH.length-1)hearts(14)}
+function closeTh(){thEl.hidden=true;document.body.style.overflow='';$('openThanks').focus()}
+$('openThanks').onclick=()=>{thEl.hidden=false;document.body.style.overflow='hidden';showTh(0);$('thNext').focus()};
+$('thNext').onclick=()=>ti<TH.length-1?showTh(ti+1):closeTh();
+$('thPrev').onclick=()=>{if(ti)showTh(ti-1)};
+$('thClose').onclick=closeTh;
+addEventListener('keydown',e=>{if(thEl.hidden)return;if(e.key==='Escape')closeTh();if(e.key==='ArrowRight')$('thNext').click();if(e.key==='ArrowLeft')$('thPrev').click()});
 
 /* Fondo de estrellas suaves */
 const cv=$('bg'),cx=cv.getContext('2d'),P=[];let W,H;
