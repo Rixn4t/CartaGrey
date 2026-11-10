@@ -218,7 +218,7 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 </section>
 
 <section class="section" id="gracias" style="padding-top:0">
-  <div class="head"><h2>Gracias por todo</h2><p>Lo que viví y aprendí contigo, Grey.</p></div>
+  <div class="head"><h2>Gracias por ser tú</h2><p>Lo que admiro de ti, Grey.</p></div>
   <div class="card" style="max-width:760px;margin:auto;text-align:center"><button class="btn primary" id="openThanks">Leer mi agradecimiento ♡</button></div>
 </section>
 
@@ -256,7 +256,7 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
 </section>
 </main>
 <footer>Hecho con amor por Ricardo Velasquez, para Greymar Prieto ♡</footer>
-<div class="thanks" id="thanks" role="dialog" aria-modal="true" aria-label="Gracias por todo" hidden>
+<div class="thanks" id="thanks" role="dialog" aria-modal="true" aria-label="Gracias por ser tú" hidden>
   <button class="xbtn" id="thClose" aria-label="Cerrar">×</button>
   <div class="box">
     <div class="step" id="thStep"><small id="thKick"></small><h3 id="thTitle"></h3><p id="thText"></p></div>
@@ -348,12 +348,11 @@ $('bigHeart').onclick=()=>{hearts(20);toast('Todo este cariño es para ti, Greym
 
 /* Gracias por todo: edita aquí los textos [antetítulo, título, texto] */
 const TH=[
- ['Gracias por los años','Más de cuatro años','Desde los chats del colegio en 2022 hasta hoy, fuiste parte de mi vida. Gracias por cada etapa.'],
- ['Gracias por lo que me enseñaste','Tu fortaleza','Verte seguir adelante a pesar de todo lo que viviste me enseñó lo que es ser fuerte de verdad.'],
- ['Gracias por lo que me enseñaste','Amar con cuidado','Tu forma de amar me mostró que querer también es respetar, tener paciencia y cuidar los detalles.'],
- ['Gracias por lo que tuve que aprender','Construir confianza','Contigo entendí que la confianza se construye con hechos y que mis inseguridades me tocan a mí. Ojalá lo hubiera aprendido antes. Gracias por tu paciencia.'],
- ['Gracias por volver','Estos días juntos','Gracias por haber regresado y por estos días juntos. Los voy a guardar con cariño.'],
- ['Para ti','Gracias, Grey','Espero que seas muy feliz y que te vaya muy bien. Por el momento yo no puedo seguir, pero mi corazón siempre te va a esperar, por si algún día estás lista. — Tu gatito ♡']];
+ ['Gracias por ser tú','Tu forma de ser','Tu personalidad, tal como eres, me encanta. Para mí eres una persona muy especial.'],
+ ['Gracias por ser tú','Tu fortaleza','Gracias por ser tan fuerte a pesar de todo lo que has vivido. Verte seguir adelante me inspira muchísimo.'],
+ ['Gracias por ser tú','Tu forma de amar','Gracias por amar de una manera tan bella. Eso dice mucho de la persona que eres.'],
+ ['Gracias por ser tú','Tu sonrisa','Gracias por tu sonrisa, que es bellísima y tiene el poder de alegrarme el día.'],
+ ['Para ti','Gracias, Grey','Gracias por ser la persona que eres y por todo lo que me has enseñado. Eres una persona increíble y mereces lo mejor. — Tu gatito ♡']];
 let ti=0;const thEl=$('thanks');
 function showTh(i){ti=i;const [k,t,x]=TH[i],st=$('thStep');
   $('thKick').textContent=k;$('thTitle').textContent=t;$('thText').textContent=x;
