@@ -252,7 +252,7 @@ footer{text-align:center;padding:22px;color:#a99eac;border-top:1px solid var(--l
       <h3 id="tTitle">Melon Vino</h3><small id="tArtist" style="color:var(--muted)">WOS</small>
       <div class="ctrl"><button id="play" aria-label="Reproducir o pausar">▶</button><input id="seek" type="range" min="0" max="1000" value="0" aria-label="Progreso"><span id="time">0:00 / 0:00</span></div>
     </div>
-    <div class="tabs"><button class="btn primary" data-t="0">Melon Vino</button><button class="btn" data-t="1">Cafuné</button></div>
+    <div class="tabs"><button class="btn primary" data-t="0">Melon Vino</button><button class="btn" data-t="1">Cafuné</button><button class="btn" data-t="2">Ti amo</button></div>
     <p class="why" id="why"></p>
     <audio id="au" loop preload="auto"></audio>
   </div>
@@ -303,7 +303,7 @@ const BACK=new Date(2026,9,18);
 })();
 
 /* Entrada */
-function openGate(){const g=$('gate');if(g.classList.contains('open'))return;g.classList.add('open');au.volume=.8;au.play().catch(()=>{});
+function openGate(){const g=$('gate');if(g.classList.contains('open'))return;g.classList.add('open');au.volume=.8;pick(Math.floor(Math.random()*TR.length),true);
   setTimeout(()=>{g.classList.add('gone');document.body.classList.remove('locked');document.body.classList.add('in')},reduce?0:900);setTimeout(()=>g.remove(),1900)}
 $('openGate').onclick=$('openBtn').onclick=openGate;
 
@@ -317,7 +317,8 @@ $('seek').oninput=e=>{if(au.duration)au.currentTime=e.target.value/1000*au.durat
 
 const TR=[
  {src:'WOS%20-%20MELON%20VINO.mp3',t:'Melon Vino',a:'WOS',w:'Esta canción sonaba mucho cuando empezábamos a conocernos. Cada vez que la escucho, vuelvo a ese comienzo. — Tu gatito ♡'},
- {src:'Cafune.mp3',t:'Cafuné',a:'Micro TDH',w:'Me la dedicaste tú, y la guardo como un regalo. — Tu gatito ♡'}];
+ {src:'Cafune.mp3',t:'Cafuné',a:'Micro TDH',w:'Me la dedicaste tú, y la guardo como un regalo. — Tu gatito ♡'},
+ {src:'TiAmo.mp3',t:'Ti amo',a:'Berlín',w:'Te la dediqué yo, porque la letra lo dice todo: te amo. Cada vez que la escucho pienso en ti. — Tu gatito ♡'}];
 function pick(i,play){au.src=TR[i].src;$('tTitle').textContent=TR[i].t;$('tArtist').textContent=TR[i].a;$('why').textContent=TR[i].w;
   document.querySelectorAll('[data-t]').forEach(b=>b.classList.toggle('primary',+b.dataset.t===i));if(play)au.play().catch(()=>{})}
 document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>pick(+b.dataset.t,true));
